@@ -1,0 +1,307 @@
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url("https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg");
+    background-size: cover;
+    font-family: sans-serif;
+    
+
+    
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+
+.left{
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: aliceblue;
+}
+.mid a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    font-size: 20px;
+    transition: 0.3s;
+
+}
+.mid a:hover{
+   background: transparent;
+   border: 2px solid  indianred;
+    border-radius: 9px;
+}
+.right a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: crimson;
+    border-radius: 8px;
+    transition: 0.4s;
+    
+
+}
+.right a:hover{
+    background: transparent;
+    border: 1px solid indianred;
+}
+.text{
+
+    max-width: 650px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: aliceblue;
+}
+.tex{
+
+    max-width: 650px;
+    position:absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: aliceblue;
+}
+.text span{
+    letter-spacing: 5px;
+    font-size: 1.5em;
+}
+.text h1{
+    font-size: 3em;
+}
+.text a{
+    text-decoration: none;
+    color: aliceblue;
+    background-color: indianred;
+    padding: 10px 30px;
+    letter-spacing: 5px;
+    transition: 0.4s;
+}
+.text a:hover{
+    background: transparent;
+    border: 2px solid indianred;
+}
+#check{
+    display: none;
+}
+.icons{
+    position: absolute;
+    right: 57;
+    font-size: 2.8rem;
+    color: aliceblue;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 1350px)and (min-width: 850px){
+    .right{
+      position: absolute;
+      top: 65%;
+    }
+    .mid a{
+        font-size: 29px;
+      }
+}
+
+
+@media (max-width: 850px)and (min-width: 781px){
+    .right{
+        position: absolute;
+        top: 75%;
+      }
+      .tex{
+        position: absolute;
+        top: 60%;
+      }
+      .text{
+        font-size: 1.4rem;
+      }
+      .mid a{
+        font-size: 27px;
+      }
+
+
+}
+@media (max-width: 781px)and (min-width: 680px){
+    .icons{
+        display: inline-flex;
+    }
+    
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .mid{
+        position: absolute;
+        top: 12%;
+        left: 8;
+        width: 98%;
+        height:0;
+        background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url('https://cdn.pixabay.com/photo/2013/02/21/19/06/drink-84533_640.jpg');
+        backdrop-filter: blur(100px);
+        background-size: cover;
+        overflow: hidden;
+        transition: .3s ease;
+        
+    }
+   
+    #check:checked~.mid{
+        
+        height: 23.4rem;
+        
+    }
+    .mid a{
+        display: block;
+        font-size: 1.7rem;
+        margin: 1.2rem 0;
+        text-align: center;
+    }
+    .text{
+        display: block;
+        position: relative;
+        top: 55%;
+    }
+    .tex{
+        display: block;
+        position: relative;
+        top: 55%;
+    }
+    
+}
+@media (max-width: 680px)and (min-width: 482px){
+    .icons{
+        display: inline-flex;
+    }
+    
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .mid{
+        position: absolute;
+        top: 14%;
+        left: 8;
+        width: 97%;
+        height:0;
+        background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url('https://cdn.pixabay.com/photo/2013/02/21/19/06/drink-84533_640.jpg');
+        backdrop-filter: blur(100px);
+        background-size: cover;
+        overflow: hidden;
+        transition: .3s ease;
+        
+    }
+    #check:checked~.mid{
+        
+        height: 21.4rem;
+        
+    }
+    .mid a{
+        display: block;
+        font-size: 1.7rem;
+        margin: 1.1rem 0;
+        text-align: center;
+        
+    }
+    .right{
+        position: absolute;
+        top: 85%;
+      }
+      .text{
+        font-size: 13px;
+        position: absolute;
+        top: 70%;
+        display: inline;
+      }
+      .tex{
+        position: absolute;
+        top: 93%;
+      }
+
+}
+@media (max-width: 482px)and (min-width: 0px){
+    .icons{
+        display: inline-flex;
+    }
+    
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .mid{
+        position: absolute;
+        top: 15%;
+        left: 8;
+        width: 95%;
+        height:0;
+        background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url('https://cdn.pixabay.com/photo/2013/02/21/19/06/drink-84533_640.jpg');
+        backdrop-filter: blur(100px);
+        background-size: cover;
+        overflow: hidden;
+        transition: .3s ease;
+        
+    }
+    #check:checked~.mid{
+        
+        height: 14.4rem;
+        
+    }
+    .mid a{
+        display: block;
+        font-size: 0.9rem;
+        margin: 0.4rem 0;
+        text-align: center;
+        
+    }
+    .right{
+        position: absolute;
+        top: 85%;
+      }
+      .text{
+        font-size: 12px;
+        position: absolute;
+        top: 70%;
+        display: inline;
+        width: 100%;
+      }
+      .tex{
+        position: absolute;
+        top: 93%;
+      }
+      
+
+}
+
+
+
+
